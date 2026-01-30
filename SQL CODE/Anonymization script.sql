@@ -29,7 +29,7 @@ INSERT INTO @FirstNames (ID, Name) VALUES
 (25,'Matthew'),(26,'Betty'),(27,'Anthony'),(28,'Margaret'),(29,'Mark'),(30,'Sandra'),
 (31,'Alex'),(32,'Ashley'),(33,'Steven'),(34,'Kimberly'),(35,'Paul'),(36,'Emily'),
 (37,'Andrew'),(38,'Donna'),(39,'Joshua'),(40,'Michelle'),(41,'Kenneth'),(42,'Dorothy'),
-(43,'Kevin'),(44,'Carol'),(45,'Brian'),(46,'Amanda'),(47,'George'),(48,'Melissa'),
+(43,'Kevin'),(44,'Carol'),(45, 'Brian'),(46,'Amanda'),(47,'George'),(48,'Melissa'),
 (49,'Timothy'),(50,'Deborah');
 
 INSERT INTO @LastNames (ID, Name) VALUES
