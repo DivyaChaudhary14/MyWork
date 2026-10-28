@@ -51,22 +51,22 @@ FROM
         ON HIFIS_Organizations.ClusterID = HIFIS_Cluster.ClusterID
 WHERE
     -- Exclude specific clusters based on their IDs
-    HIFIS_Organizations.ClusterID NOT IN (ex1, ex2, ex3 etc)
+    HIFIS_Organizations.ClusterID NOT IN (#, #, #)
     
-    -- Exclude a specific organization (ID = 1)
-    AND HIFIS_Organizations.OrganizationID <> 1
+    -- Exclude a specific organization
+    AND HIFIS_Organizations.OrganizationID <> #
     
     -- Exclude programs and organizations
-    AND NOT (HIFIS_Programs.ProgramID = 1 
-             AND HIFIS_Organizations.OrganizationID IN (ex1, ex2, ex3))
+    AND NOT (HIFIS_Programs.ProgramID = # 
+             AND HIFIS_Organizations.OrganizationID IN (#, #, #))
     
     -- Exclude programs
-    AND NOT (HIFIS_Programs.ProgramID = 9 
-             AND HIFIS_Organizations.OrganizationID = 12)
+    AND NOT (HIFIS_Programs.ProgramID = # 
+             AND HIFIS_Organizations.OrganizationID = #)
     
-    -- Exclude Housing First programs for specific organizations
-    AND NOT (HIFIS_Programs.ProgramID = 33 
-             AND HIFIS_Organizations.OrganizationID IN (61, 62))
+    -- Exclude a program for specific organizations
+    AND NOT (HIFIS_Programs.ProgramID = # 
+             AND HIFIS_Organizations.OrganizationID IN (#, #))
              
 ORDER BY  
     -- Sort results by program name
